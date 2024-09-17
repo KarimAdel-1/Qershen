@@ -5,6 +5,7 @@ import Loader from './ui/Loader';
 
 function App() {
   return (
+    <div></div>
     // <BrowserRouter>
     //   <Routes>
     //     <Route path="/" element={<LogIn />} />
