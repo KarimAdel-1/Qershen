@@ -14,6 +14,7 @@ const Home = () => {
   const howItWorksRef = useRef(null);
   const faqsRef = useRef(null);
   const heroRef = useRef(null);
+  const featuresRef = useRef(null);
 
   return (
     <main>
@@ -22,14 +23,18 @@ const Home = () => {
         howItWorksRef={howItWorksRef}
         faqsRef={faqsRef}
         heroRef={heroRef}
+        featuresRef={featuresRef}
       />
       <div ref={heroRef} id="hero">
         <Hero mutualFundsRef={mutualFundsRef} />
       </div>
-      <div id="logo-ticker">
+      <div>
         <LogoTicker />
       </div>
-      <Features />
+
+      <div id="features" ref={featuresRef}>
+        <Features />
+      </div>
 
       <div ref={mutualFundsRef} id="mutual-funds" className="border">
         <MutualFundsInfo />

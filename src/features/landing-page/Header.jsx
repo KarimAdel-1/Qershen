@@ -1,6 +1,12 @@
 /* eslint-disable react/prop-types */
 
-const Header = ({ mutualFundsRef, howItWorksRef, faqsRef, heroRef }) => {
+const Header = ({
+  mutualFundsRef,
+  howItWorksRef,
+  faqsRef,
+  heroRef,
+  featuresRef,
+}) => {
   return (
     <header className="sticky top-0 z-10 backdrop-blur-sm">
       <div className="flex items-center justify-center gap-3 bg-black py-3 text-sm text-white">
@@ -26,7 +32,12 @@ const Header = ({ mutualFundsRef, howItWorksRef, faqsRef, heroRef }) => {
               <img src="Asset8.png" alt="Qershen logo" width={120} />
             </a>
             <nav className="hidden items-center gap-6 text-black/60 md:flex">
-              <a href="#features" className="cursor-pointer font-medium">
+              <a
+                className="cursor-pointer font-medium"
+                onClick={() =>
+                  featuresRef.current.scrollIntoView({ behavior: 'smooth' })
+                }
+              >
                 Features
               </a>
               <a
