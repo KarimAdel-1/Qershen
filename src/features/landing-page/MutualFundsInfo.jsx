@@ -129,7 +129,7 @@ const MutualFundsInfo = () => {
   };
 
   return (
-    <section className="mt-20 flex h-screen w-full overflow-hidden py-[72px]">
+    <section className="mt-10 flex h-screen w-full overflow-hidden py-[72px]">
       <div className="container flex flex-col gap-10 overflow-hidden">
         <div className="mx-auto max-w-7xl text-center">
           <h2 className="mb-6 text-center text-4xl font-bold tracking-tighter md:text-6xl">

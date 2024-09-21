@@ -85,7 +85,7 @@ const AccordionItem = ({ question, answer }) => {
 
 const FAQs = () => {
   return (
-    <div className="py-[72px] text-black sm:py-24">
+    <section className="mt-10 py-[72px] text-black sm:py-24">
       <div className="container">
         <h2 className="mx-auto text-center text-5xl font-bold tracking-tighter sm:max-w-[748px] sm:text-6xl">
           Everything You Need to Know About Qershen
@@ -96,7 +96,7 @@ const FAQs = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

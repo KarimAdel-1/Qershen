@@ -1,4 +1,6 @@
-const Hero = () => {
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
+const Hero = ({ mutualFundsRef }) => {
   return (
     <section
       className="h-[75dvh] overflow-x-clip pb-20 pt-8 text-black md:pb-10 md:pt-5"
@@ -20,8 +22,21 @@ const Hero = () => {
               today, hassle-free.
             </p>
             <div className="mt-[30px] flex items-center gap-1">
-              <button className="btn btn-primary">Start Investing Now</button>
-              <button className="btn btn-text">Learn more &rarr;</button>
+              <a
+                href="https://5cs8k6vnlu5.typeform.com/to/fxGDl8Hv"
+                target="blank"
+                className="btn btn-primary"
+              >
+                Start Investing Now
+              </a>
+              <button
+                className="btn btn-text"
+                onClick={() =>
+                  mutualFundsRef.current.scrollIntoView({ behavior: 'smooth' })
+                }
+              >
+                Learn more &rarr;
+              </button>
             </div>
           </div>
 

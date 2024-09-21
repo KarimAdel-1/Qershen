@@ -1,4 +1,6 @@
-const Header = () => {
+/* eslint-disable react/prop-types */
+
+const Header = ({ mutualFundsRef, howItWorksRef, faqsRef, heroRef }) => {
   return (
     <header className="sticky top-0 z-10 backdrop-blur-sm">
       <div className="flex items-center justify-center gap-3 bg-black py-3 text-sm text-white">
@@ -15,34 +17,42 @@ const Header = () => {
       <div className="py-5">
         <div className="container">
           <div className="flex items-center justify-between">
-            <img src="Asset8.png" alt="Qershen logo" width={120} />
-            <button className="h-5 w-5 md:hidden">
-              <svg
-                className="h-6 w-6"
-                fill="none"
-                stroke="black"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16m-7 6h7"
-                />
-              </svg>
-            </button>
+            <a
+              className="cursor-pointer"
+              onClick={() =>
+                heroRef.current.scrollIntoView({ behavior: 'smooth' })
+              }
+            >
+              <img src="Asset8.png" alt="Qershen logo" width={120} />
+            </a>
             <nav className="hidden items-center gap-6 text-black/60 md:flex">
-              <a href="#" className="font-medium">
+              <a href="#features" className="cursor-pointer font-medium">
                 Features
               </a>
-              <a href="#" className="font-medium">
+              <a
+                className="cursor-pointer font-medium"
+                onClick={() =>
+                  mutualFundsRef.current.scrollIntoView({ behavior: 'smooth' })
+                }
+              >
                 Why to invest in mutual funds?
               </a>
-              <a href="#" className="font-medium">
+              <a
+                className="cursor-pointer font-medium"
+                onClick={() =>
+                  howItWorksRef.current.scrollIntoView({ behavior: 'smooth' })
+                }
+              >
                 How It Works?
               </a>
-
+              <a
+                className="cursor-pointer font-medium"
+                onClick={() =>
+                  faqsRef.current.scrollIntoView({ behavior: 'smooth' })
+                }
+              >
+                FAQs
+              </a>
               <a
                 href="https://5cs8k6vnlu5.typeform.com/to/fxGDl8Hv"
                 target="blank"
