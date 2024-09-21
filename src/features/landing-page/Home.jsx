@@ -7,6 +7,8 @@ import HowItWorks from './HowItWorks';
 import FAQs from './FAQs';
 import Footer from './Footer';
 
+import Features from './Features';
+
 const Home = () => {
   const mutualFundsRef = useRef(null);
   const howItWorksRef = useRef(null);
@@ -27,6 +29,8 @@ const Home = () => {
       <div id="logo-ticker">
         <LogoTicker />
       </div>
+      <Features />
+
       <div ref={mutualFundsRef} id="mutual-funds" className="border">
         <MutualFundsInfo />
       </div>
