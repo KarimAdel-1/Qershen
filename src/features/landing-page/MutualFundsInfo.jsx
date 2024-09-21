@@ -50,7 +50,7 @@ const features = [
 
 const MutualFundsInfo = () => {
   const sliderRef = useRef(null);
-  const [active, setActive] = useState(1); // Active item state
+  const [active, setActive] = useState(0); // Active item state
 
   //   const tabRef = useRef(null);
   const xPercentage = useMotionValue(0);
@@ -73,7 +73,7 @@ const MutualFundsInfo = () => {
     for (let i = active + 1; i < items.length; i++) {
       stt++;
       items[i].style.transform =
-        `translateX(${120 * stt}px) scale(${1 - 0.2 * stt}) perspective(16px) rotateY(-1deg)`;
+        `translateX(${20 * stt}px) scale(${1 - 0.2 * stt}) perspective(16px) rotateY(-1deg)`;
       items[i].style.zIndex = -stt;
       items[i].style.filter = 'blur(5px)';
       items[i].style.opacity = stt > 2 ? 0 : 0.6;
@@ -129,8 +129,8 @@ const MutualFundsInfo = () => {
   };
 
   return (
-    <section className="mt-10 flex h-screen w-full overflow-hidden py-[72px]">
-      <div className="container flex flex-col gap-10 overflow-hidden">
+    <section className="mt-10 flex h-screen w-full overflow-x-hidden py-[72px]">
+      <div className="container flex flex-col gap-10 overflow-x-hidden">
         <div className="mx-auto max-w-7xl text-center">
           <h2 className="mb-6 text-center text-4xl font-bold tracking-tighter md:text-6xl">
             Why to invest in mutual funds?
@@ -146,12 +146,12 @@ const MutualFundsInfo = () => {
         </div>
         <div
           ref={sliderRef}
-          className="flex h-full items-center justify-center"
+          className="flex h-full items-center justify-center overflow-x-hidden"
         >
           {features.map(({ title, description, icon }, index) => (
             <div
               key={index}
-              className="item absolute h-[320px] w-[250px] rounded-xl border bg-white p-5 text-center transition-all duration-500 lg:w-[450px]"
+              className="item absolute h-[320px] w-full max-w-[250px] rounded-xl border bg-white p-5 text-center transition-all duration-500 lg:w-[450px]"
             >
               <motion.div
                 className="absolute inset-0 rounded-xl border-2 border-green-600"
