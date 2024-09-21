@@ -73,7 +73,7 @@ const MutualFundsInfo = () => {
     for (let i = active + 1; i < items.length; i++) {
       stt++;
       items[i].style.transform =
-        `translateX(${20 * stt}px) scale(${1 - 0.2 * stt}) perspective(16px) rotateY(-1deg)`;
+        `translateX(${35 * stt}px) scale(${1 - 0.2 * stt}) perspective(16px) rotateY(-1deg)`;
       items[i].style.zIndex = -stt;
       items[i].style.filter = 'blur(5px)';
       items[i].style.opacity = stt > 2 ? 0 : 0.6;
@@ -169,22 +169,26 @@ const MutualFundsInfo = () => {
               </div>
             </div>
           ))}
-          <div className="flex w-full items-center justify-between">
+          <div className="relative flex w-full items-center md:justify-between">
             {/* Controls */}
-            <button
-              id="prev"
-              onClick={prevSlide}
-              className="z-10 border-none bg-transparent font-mono text-6xl font-bold text-green-500 opacity-50 transition-opacity duration-500 hover:opacity-100"
-            >
-              {'<'}
-            </button>
-            <button
-              id="next"
-              onClick={nextSlide}
-              className="z-10 border-none bg-transparent font-mono text-6xl font-bold text-green-500 opacity-50 transition-opacity duration-500 hover:opacity-100"
-            >
-              {'>'}
-            </button>
+            {active > 0 && (
+              <button
+                id="prev"
+                onClick={prevSlide}
+                className="z-10 border-none bg-transparent font-mono text-6xl font-bold text-green-500 opacity-50 transition-opacity duration-500 hover:opacity-100 sm:absolute sm:left-0"
+              >
+                {'<'}
+              </button>
+            )}
+            {active < features.length - 1 && (
+              <button
+                id="next"
+                onClick={nextSlide}
+                className="z-10 border-none bg-transparent font-mono text-6xl font-bold text-green-500 opacity-50 transition-opacity duration-500 hover:opacity-100 sm:absolute sm:right-0"
+              >
+                {'>'}
+              </button>
+            )}
           </div>
         </div>
       </div>
