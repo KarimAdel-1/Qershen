@@ -18,7 +18,7 @@ const LogoTicker = () => {
   ];
 
   return (
-    <section className="md:py-22 bg-[#fcfcfd] py-[38px]">
+    <section className="md:py-22 bg-[#fcfcfd] py-[30px]">
       <div className="container mx-auto">
         <div className="flex items-center gap-5">
           <div className="flex-1 md:flex-none">
