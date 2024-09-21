@@ -80,5 +80,3 @@ You may use, modify, and distribute this code, but please provide attribution an
 For any inquiries or feedback, feel free to reach out:
 
 - **GitHub**: [KarimAdel-1](https://github.com/KarimAdel-1)
-
-```
