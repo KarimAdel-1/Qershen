@@ -1,9 +1,9 @@
-import Navbar from './Navbar';
+import Home from '../features/landing-page/Home';
 
 const AppLayout = () => {
   return (
-    <div>
-      <Navbar />
+    <div className="h-screen">
+      <Home />
     </div>
   );
 };

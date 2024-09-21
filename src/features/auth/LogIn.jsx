@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import Loader from '../../ui/Loader';
@@ -31,8 +32,8 @@ const LogIn = () => {
     return <Loader />;
   }
   return (
-    <div className="flex h-screen bg-white justify-center">
-      <div className="w-full lg:w-1/2 flex items-center justify-center p-4">
+    <div className="flex h-screen justify-center bg-white">
+      <div className="flex w-full items-center justify-center p-4 lg:w-1/2">
         <div className="mx-auto w-[400px] p-4">
           {/* Form */}
           <form onSubmit={formik.handleSubmit}>
@@ -41,7 +42,7 @@ const LogIn = () => {
             <div className="mb-3 flex flex-col gap-3">
               <label className="text-sm font-semibold">Email</label>
               <input
-                className="text-sm w-full outline-none border-[#22b352] border h-9 px-2 rounded-md focus:border-[#3a9f5c]"
+                className="h-9 w-full rounded-md border border-[#22b352] px-2 text-sm outline-none focus:border-[#3a9f5c]"
                 type="text"
                 placeholder="Email@company.com"
                 name="email"
@@ -51,7 +52,7 @@ const LogIn = () => {
                 required
               />
               {formik.touched.email && formik.errors.email ? (
-                <div className="text-red-500 text-sm">
+                <div className="text-sm text-red-500">
                   {formik.errors.email}
                 </div>
               ) : null}
@@ -59,7 +60,7 @@ const LogIn = () => {
             <div className="mb-3 flex flex-col gap-3">
               <label className="text-sm font-semibold">Password</label>
               <input
-                className="text-sm w-full outline-none border-[#22b352] border h-9 px-2 rounded-md focus:border-[#3a9f5c]"
+                className="h-9 w-full rounded-md border border-[#22b352] px-2 text-sm outline-none focus:border-[#3a9f5c]"
                 type="password"
                 placeholder="Password"
                 name="password"
@@ -69,7 +70,7 @@ const LogIn = () => {
                 required
               />
               {formik.touched.password && formik.errors.password ? (
-                <div className="text-red-500 text-sm">
+                <div className="text-sm text-red-500">
                   {formik.errors.password}
                 </div>
               ) : null}
@@ -92,18 +93,18 @@ const LogIn = () => {
               </h1>
               <div className="flex-grow border-t border-gray-200"></div>
             </div>
-            <div className=" flex gap-2 h-16 justify-center items-center">
-              <button className="flex w-12 h-12 items-center justify-center rounded-full border text-center text-sm font-semibold tracking-wide text-blue-600 outline-none transition-colors duration-300 disabled:cursor-not-allowed">
+            <div className="flex h-16 items-center justify-center gap-2">
+              <button className="flex h-12 w-12 items-center justify-center rounded-full border text-center text-sm font-semibold tracking-wide text-blue-600 outline-none transition-colors duration-300 disabled:cursor-not-allowed">
                 <img src="/icons8-google-96.png" className="w-7"></img>
               </button>
-              <button className="flex w-12 h-12 items-center justify-center rounded-full border text-center text-sm font-semibold tracking-wide text-blue-600 outline-none transition-colors duration-300 disabled:cursor-not-allowed">
+              <button className="flex h-12 w-12 items-center justify-center rounded-full border text-center text-sm font-semibold tracking-wide text-blue-600 outline-none transition-colors duration-300 disabled:cursor-not-allowed">
                 <img src="/icons8-facebook-96.png" className="w-9"></img>
               </button>
             </div>
           </div>
         </div>
       </div>
-      <div className="hidden lg:flex lg:h-screen lg:flex-col lg:w-1/2 bg-cover border">
+      <div className="hidden border bg-cover lg:flex lg:h-screen lg:w-1/2 lg:flex-col">
         test
       </div>
     </div>

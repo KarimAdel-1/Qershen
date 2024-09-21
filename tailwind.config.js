@@ -2,15 +2,21 @@
 export default {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
+    screens: {
+      sm: '375px',
+      md: '768px',
+      lg: '1200px',
+    },
     extend: {
-      strokeWidth: {
-        2: '2',
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
       },
-      strokeLinejoin: {
-        round: 'round',
-      },
-      strokeLinecap: {
-        round: 'round',
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: '20px',
+          lg: '80px',
+        },
       },
     },
   },

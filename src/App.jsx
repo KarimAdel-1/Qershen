@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import LogIn from './features/auth/LogIn';
 import AppLayout from './ui/AppLayout';
@@ -5,13 +6,12 @@ import Loader from './ui/Loader';
 
 function App() {
   return (
-    <div></div>
-    // <BrowserRouter>
-    //   <Routes>
-    //     <Route path="/" element={<LogIn />} />
-    //     <Route path="/app/*" element={<AppLayout />} />
-    //   </Routes>
-    // </BrowserRouter>
+    <BrowserRouter>
+      <Routes>
+        {/* <Route path="/" element={<LogIn />} /> */}
+        <Route path="/" element={<AppLayout />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
