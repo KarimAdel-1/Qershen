@@ -1,4 +1,4 @@
-# Qershen 🌟
+![Qershen_Logo](./public/Asset8.png)
 
 **Qershen** is a cutting-edge financial portfolio application designed to empower users with intelligent investment strategies. By providing personalized investment recommendations, Qershen enables users to effectively manage their investments across various asset classes. The user-friendly interface facilitates tracking and managing portfolios while supporting micro-investing and secure transactions.
 
